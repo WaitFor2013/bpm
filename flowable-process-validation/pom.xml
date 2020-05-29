@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<name>Flowable - Process Validation</name>
+	<artifactId>flowable-process-validation</artifactId>
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>com.np.bpm</groupId>
+		<artifactId>bpm</artifactId>
+		<version>1.0.2.fix</version>
+	</parent>
+
+	<properties>
+		<flowable.artifact>
+			org.flowable.validation
+		</flowable.artifact>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.np.bpm</groupId>
+			<artifactId>flowable-bpmn-model</artifactId>
+			<version>${parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
+
+
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>Internal Releases</name>
+			<url>http://10.51.14.48:8081/repository/3rd_part/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-releases</id>
+			<name>Internal Releases</name>
+			<url>http://10.51.14.48:8081/repository/3rd_part/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

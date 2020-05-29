@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<name>Flowable - Image Generator</name>
+	<artifactId>flowable-image-generator</artifactId>
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>com.np.bpm</groupId>
+		<artifactId>bpm</artifactId>
+		<version>1.0.2.fix</version>
+	</parent>
+
+	<properties>
+		<flowable.artifact>
+			org.flowable.image
+		</flowable.artifact>
+		<flowable.osgi.import.additional>
+	      javax.imageio*;resolution:=optional,
+	    </flowable.osgi.import.additional>
+	</properties>
+
+
+
+	<dependencies>
+		<dependency>
+			<groupId>com.np.bpm</groupId>
+			<artifactId>flowable-bpmn-model</artifactId>
+			<version>${parent.version}</version>
+		</dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+	</dependencies>
+
+
+
+</project>
